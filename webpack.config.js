@@ -15,6 +15,10 @@ const conf = {
                 exclude: /node_modules/,
                 loader: 'babel',
                 test: /\.jsx?$/
+            },
+            {
+                test: /\.svg$/,
+                loaders: ['raw']
             }
         ],
         preLoaders: [{

@@ -7,9 +7,18 @@ export default class Stepper extends Component {
         const stepStyle = {
             margin: '0 10px'
         };
+        const iconStyle = {
+            borderRadius: '50%',
+            width: '15px',
+            height: '15px',
+            border: '1px solid #bebebe'
+        };
         return (
-            <div className={`${BASE_CLASS}_step`} style={stepStyle}>
-                {step.name}
+            <div className={`${BASE_CLASS}_step ${BASE_CLASS}_stepLine`} style={stepStyle}>
+                <div className={`${BASE_CLASS}_icon`} style={iconStyle}></div>
+                <div className={`${BASE_CLASS}_title`}>
+                    {step.name}
+                </div>
             </div>
         );
     }
